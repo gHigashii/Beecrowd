@@ -12,5 +12,3 @@ Beecrowd's exercicies.
 All exercicies prepared by me from the beecrowd website until yet.
 Site: beecrowd.com.br
 Current ranking within the university: 86/393
-
-vai toma no cu giovane
