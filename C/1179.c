@@ -1,13 +1,13 @@
 #include <stdio.h>
-int main()
-{
+
+int main(){
     int a,b,d,e,f,g,h,i,j,n,p;
     int c=0, l=0, m=0, x=0;
-    int par[5],impar[5],para[15];
+    int par[5],impar[5],aux[15];
  
  
     for(b=0; b<15; b++)
-        scanf("%d", &para[b]);
+        scanf("%d", &aux[b]);
 
     for(a=0; a<15; a++)
     {
@@ -24,16 +24,16 @@ int main()
             m=0;
         }
 
-        if(para[a]%2!=0)
+        if(aux[a]%2!=0)
         {
-            impar[c]=para[a];
+            impar[c]=aux[a];
             ++c;
             l++;
             if(c==5) c=0;
         }
-        if(para[a]%2==0)
+        if(aux[a]%2==0)
         {
-            par[x]=para[a];
+            par[x]=aux[a];
             ++x;
             m++;
             if(x==5) x=0;
