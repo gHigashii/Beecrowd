@@ -1,24 +1,28 @@
 #include <stdio.h>
 
-int main(){
-    double x;
+int main() {
 
-    scanf("%lf", &x);
+    double X;
 
-    if (x<0 || x>100.0)
-        printf("Fora de intervalor\n");
+    scanf("%lf",&X);
+
+    if(X<0 || X>100.0)
+        printf("Fora de intervalo\n");
+    else 
     
-        else if(x<=25.0)
-            printf("Intervalo [0,25]\n");
-        
-        else if(x<=50.0)
-            printf("Intervalo (25,50]\n");
-        
-        else if(x<=75.0)
-            printf("Intervalo (50,75]");
-        
-        else if(x<=100.0)
-            printf("Intervalo (75,100]\n");
-        
+    if(X<=25.0)
+    printf("Intervalo [0,25]\n");
+    else
+    
+    if(X<=50.0)
+    printf("Intervalo (25,50]\n");
+    else
+    
+    if(X<=75.0)
+    printf("Intervalo (50,75]");
+    else if(X<=100.0)
+        printf("Intervalo (75,100]\n");
+
     return 0;
+
 }

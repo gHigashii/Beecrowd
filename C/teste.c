@@ -1,47 +1,32 @@
-#include <stdio.h>
 int main()
 {
-    int a,b,d,e,f,g,h,i,j,n,p;
-    int c=0, l=0, m=0, x=0;
-    int par[5],impar[5],para[15];
- 
- 
-    for(b=0; b<15; b++)
-        scanf("%d", &para[b]);
-
-    for(a=0; a<15; a++)
+    int golInter,golGremio,c,d,i,n,g,h,Empate,Gremio,Inter;
+    c=0,d=0,i=0,Empate=0,Gremio=0,Inter=0;
+    while(1)
     {
-        if(l==5)
-        {
-            for(n=0; n<5; n++)
-                printf("impar[%d] = %d\n", n, impar[n]);
-            l=0;
-        }
-        if(m==5)
-        {
-            for(p=0; p<5; p++)
-                printf("par[%d] = %d\n", p, par[p]);
-            m=0;
-        }
-
-        if(para[a]%2!=0)
-        {
-            impar[c]=para[a];
-            ++c;
-            l++;
-            if(c==5) c=0;
-        }
-        if(para[a]%2==0)
-        {
-            par[x]=para[a];
-            ++x;
-            m++;
-            if(x==5) x=0;
-        }
+        scanf ("%d%d", &golInter, &golGremio);
+        if(golInter>golGremio) Inter++;
+        if(golInter<golGremio) Gremio++;
+        if(golInter==golGremio) Empate++;
+        c+=golInter;
+        d+=golGremio;
+        i++;
+        printf("Novo grenal (1-sim 2-nao)\n");
+        scanf("%d",&n);
+        if(n==1)
+            continue;
+        if(n==2)
+            break;
     }
-    for(i=0; i<l; i++)
-            printf("impar[%d] = %d\n", i, impar[i]);
-    for(j=0; j<m; j++)
-            printf("par[%d] = %d\n", j, par[j]);
+    printf("%d grenais\n",i);
+    printf("Inter:%d\n",Inter);
+    printf("Gremio:%d\n",Gremio);
+    printf("Empates:%d\n",Empate);
+    if(Inter>Gremio)
+        printf("Inter venceu mais\n");
+    if(Inter<Gremio)
+        printf("Gremio venceu mais\n");
+    if(Gremio==Inter)
+        printf("Nao houve vencedor\n");
     return 0;
 }
